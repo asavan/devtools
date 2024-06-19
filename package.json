@@ -11,14 +11,17 @@
     "style:fix": "npx eslint --no-eslintrc --config .eslintrc.json --fix ",
     "style2": "npx stylelint \"**/*.css\"",
     "style2:fix": "npx stylelint \"**/*.css\" --fix",
+    "style4": "npx dprint check --config ./linters/dprint.json ./src/css/**",
+    "style4:fix": "npx dprint fmt --config ./linters/dprint.json ./src/css/**",
     "updates": "npx ncu",
     "updates:fix": "npx ncu -u && npm install"
   },
   "devDependencies": {
-    "eslint": "^8.50.0",
-    "globals": "^13.22.0",
-    "npm-check-updates": "^16.14.4",
-    "stylelint": "^15.10.3",
-    "stylelint-config-standard": "^34.0.0"
+    "@stylistic/eslint-plugin-js": "^2.2.1",
+    "eslint": "^9.5.0",
+    "globals": "^15.6.0",
+    "npm-check-updates": "^16.14.20",
+    "stylelint": "^16.6.1",
+    "stylelint-config-standard": "^36.0.0"
   }
 }
