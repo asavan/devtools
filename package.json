@@ -19,12 +19,12 @@
     "updates:fix": "npx ncu -u && npm install"
   },
   "devDependencies": {
-    "@stylistic/eslint-plugin-js": "^4.0.0",
+    "@stylistic/eslint-plugin-js": "^4.0.1",
     "code-complexity": "^4.4.4",
-    "eslint": "^9.20.1",
+    "eslint": "^9.21.0",
     "esprima": "^4.0.1",
-    "globals": "^15.15.0",
-    "npm-check-updates": "^17.1.14",
+    "globals": "^16.0.0",
+    "npm-check-updates": "^17.1.15",
     "stylelint": "^16.14.1",
     "stylelint-config-standard": "^37.0.0"
 

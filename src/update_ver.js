@@ -6,15 +6,23 @@ const exec = promisify(child_process.exec);
 
 const projects = [
     "15",
+    "bsod",
     "canvasboard",
     "determinant-web",
+    "devtools",
     "dots",
     "fool",
+    "hedgehog",
     "localtext",
     "mastermind",
     "moonstone",
+    "mouse-ramrod",
     "quadripple",
-    "sosgame"
+    "riverfight",
+    "sosgame",
+    "strider",
+    "timer",
+    "tray-electron"
 ];
 
 const commands = [
@@ -45,7 +53,19 @@ async function check(dir) {
     return !stdout.includes("All dependencies match the latest package versions");
 }
 
+function arrayEquals(a, b) {
+    return Array.isArray(a) &&
+        Array.isArray(b) &&
+        a.length === b.length &&
+        a.every((val, index) => val === b[index]);
+}
+
 async function runAll() {
+    const sortedProjects = sortInput();
+    if (!arrayEquals(sortedProjects, projects)) {
+        console.error("Not sorted months");
+        return;
+    }
     let i = 0;
     for (const project of projects) {
         {
@@ -67,8 +87,9 @@ async function runAll() {
 
 await runAll();
 function sortInput() {
-    projects.sort();
-    console.log(projects);
+    const sortedProjects = projects.toSorted();
+    console.log(sortedProjects);
+    return sortedProjects;
 }
 
 // sortInput();
