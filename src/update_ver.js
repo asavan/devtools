@@ -10,6 +10,7 @@ const projects = [
     "canvasboard",
     "determinant-web",
     "devtools",
+    "dixitgame",
     "dots",
     "fool",
     "hedgehog",
@@ -85,7 +86,6 @@ async function runAll() {
     }
 }
 
-await runAll();
 function sortInput() {
     const sortedProjects = projects.toSorted();
     console.log(sortedProjects);
@@ -93,3 +93,4 @@ function sortInput() {
 }
 
 // sortInput();
+await runAll();
