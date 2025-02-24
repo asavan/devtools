@@ -9,8 +9,8 @@
   "scripts": {
     "seccode": "node --env-file=.env ./src/totp.js",
     "updatever": "node ./src/update_ver.js",
-    "style": "npx eslint --no-eslintrc --config .eslintrc.json ",
-    "style:fix": "npx eslint --no-eslintrc --config .eslintrc.json --fix ",
+    "style": "npx eslint . -c ./eslint.config.js",
+    "style:fix": "npx eslint . -c ./eslint.config.js --fix ",
     "style2": "npx stylelint \"**/*.css\"",
     "style2:fix": "npx stylelint \"**/*.css\" --fix",
     "style4": "npx dprint check --config ./linters/dprint.json ./src/css/**",

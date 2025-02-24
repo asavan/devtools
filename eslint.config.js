@@ -58,8 +58,8 @@ export default [
             "@stylistic/js/max-len": ["error", {"code": 120}],
             "@stylistic/js/no-whitespace-before-property": ["error"],
             "@stylistic/js/no-mixed-spaces-and-tabs": ["error"],
-            "@stylistic/js/comma-spacing": ["error"],
-            "@stylistic/js/no-multi-spaces": ["error"]
+            "@stylistic/js/no-multi-spaces": ["error"],
+            "@stylistic/js/comma-spacing": ["error"]
         }
     },
     {
