@@ -1,6 +1,6 @@
 import js from "@eslint/js";
 import globals from "globals";
-import stylisticJs from '@stylistic/eslint-plugin-js';
+import stylistic from '@stylistic/eslint-plugin';
 
 export default [
     {
@@ -12,6 +12,7 @@ export default [
             sourceType: "module",
             globals: {
                 ...globals.browser,
+                process: "readonly",
                 __USE_SERVICE_WORKERS__: "readonly",
                 __SERVICE_WORKER_VERSION__: "readonly",
                 __USE_DEBUG_ASSERT__: "readonly"
@@ -20,7 +21,7 @@ export default [
     },
     {
         plugins: {
-            '@stylistic/js': stylisticJs
+            '@stylistic': stylistic
         },
         files: ["src/**/*.js", "test/**/*.js"],
         ignores: ["src/js/lib/*"],
@@ -34,32 +35,32 @@ export default [
             "brace-style": ["error", "1tbs"],
             "arrow-body-style": ["error"],
             "space-before-blocks": ["error", "always"],
-            "@stylistic/js/indent": [
+            "@stylistic/indent": [
                 "error",
                 4
             ],
-            "@stylistic/js/linebreak-style": [
+            "@stylistic/linebreak-style": [
                 "error",
                 "windows"
             ],
-            "@stylistic/js/quotes": [
+            "@stylistic/quotes": [
                 "error",
                 "double"
             ],
-            "@stylistic/js/semi": [
+            "@stylistic/semi": [
                 "error",
                 "always"
             ],
-            "@stylistic/js/no-extra-semi": ["error"],
-            "@stylistic/js/keyword-spacing": ["error"],
-            "@stylistic/js/semi-spacing": ["error"],
-            "@stylistic/js/no-trailing-spaces": ["error"],
-            "@stylistic/js/no-tabs": ["error"],
-            "@stylistic/js/max-len": ["error", {"code": 120}],
-            "@stylistic/js/no-whitespace-before-property": ["error"],
-            "@stylistic/js/no-mixed-spaces-and-tabs": ["error"],
-            "@stylistic/js/no-multi-spaces": ["error"],
-            "@stylistic/js/comma-spacing": ["error"]
+            "@stylistic/no-extra-semi": ["error"],
+            "@stylistic/keyword-spacing": ["error"],
+            "@stylistic/semi-spacing": ["error"],
+            "@stylistic/no-trailing-spaces": ["error"],
+            "@stylistic/no-tabs": ["error"],
+            "@stylistic/max-len": ["error", {"code": 120}],
+            "@stylistic/no-whitespace-before-property": ["error"],
+            "@stylistic/no-mixed-spaces-and-tabs": ["error"],
+            "@stylistic/no-multi-spaces": ["error"],
+            "@stylistic/comma-spacing": ["error"]
         }
     },
     {
